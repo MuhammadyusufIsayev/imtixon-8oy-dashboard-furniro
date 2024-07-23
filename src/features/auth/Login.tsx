@@ -18,13 +18,14 @@ const Login: React.FC = () => {
     control,
     reset,
   } = useForm<LoginForm>();
+
   const navigate = useNavigate();
 
   const onSubmit = async (data: LoginForm) => {
     const token = await SignIn(data);
     console.log(token);
     if (token) {
-      localStorage.setItem("token", token.token);
+      localStorage.setItem("token", token);
       reset();
       navigate("/dashboard");
       alert("Login Successful");
