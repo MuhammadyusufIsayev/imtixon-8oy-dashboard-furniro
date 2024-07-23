@@ -24,7 +24,7 @@ const Login: React.FC = () => {
     const token = await SignIn(data);
     console.log(token);
     if (token) {
-      localStorage.setItem("token", token);
+      localStorage.setItem("token", token.token);
       reset();
       navigate("/dashboard");
       alert("Login Successful");

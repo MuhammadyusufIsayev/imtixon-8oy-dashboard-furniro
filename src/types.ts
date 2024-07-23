@@ -1,4 +1,3 @@
-// src/types.ts
 
 export interface Category {
   _id?: string;
